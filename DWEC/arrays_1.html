@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>arrays 1</title>
+
+    </head>
+
+    <body>
+                
+        <script>
+        
+            // Creamos un array 
+            window.onload = function() {
+            let palabras = [];
+            while (true){
+                let palabras_poner = prompt("Indica la palabra que quieras introducir en el array:");
+                if (palabras_poner === null || palabras_poner === ""){
+                    break;
+                }
+                let limpia = palabras_poner.trim(); // Limpio los espacios
+                palabras.push(limpia);
+            }
+                
+
+            // Mostramos las palabras almacenadas en el array
+            palabras.forEach(palabras_poner => {
+                let limpia = palabras_poner.trim();
+                if (limpia !== "") {
+                    alert(limpia);
+                }
+            });
+         };
+        </script>
+      
+    </body>
+</html>
+
+
+
