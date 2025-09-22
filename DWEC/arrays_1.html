@@ -20,6 +20,9 @@
                 }
                 let limpia = palabras_poner.trim(); // Limpio los espacios
                 palabras.push(limpia);
+
+                let contador = 1;
+                contador++;
             }
                 
 
@@ -30,7 +33,23 @@
                     alert(limpia);
                 }
             });
-         };
+
+            const resultado = palabras.filter(palabras_poner => {
+
+                //elimina las palabras que contiene numeros
+                if(/\d/.test(palabras_poner)) return false;
+
+                if(palabras_poner === null || palabras_poner === "") return false;
+
+                return true;
+            })
+            .sort((a, b) => b.localeCompare(a)); //ordena de la Z a la A
+
+            // muestra las palabras por pantalla y las cuenta
+            for(let i = 0; i < resultado.length; i++){
+                document.write("El elemento " + (i + 1) + " es: " + resultado[i] + " <br>");
+            }
+        }
         </script>
       
     </body>
@@ -38,3 +57,4 @@
 
 
 
+            
