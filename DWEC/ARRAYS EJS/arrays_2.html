@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>arrays 1</title>
+
+    </head>
+
+    <body>
+        <style>
+            body{
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        </style>
+        <script>
+        
+            // Creamos un array 
+          
+            let numeros = [];
+      
+                numeros.length = 20;
+                for (let i = 0; i < numeros.length; i++) {
+                    //numeros random del 0 al 10
+                    numeros[i] = Math.floor(Math.random() * 10) + 1;
+                }
+                
+                const numeros_pares = numeros.filter(numero => numero % 2 === 0);
+                //elimina el primer elemento
+                numeros_pares.splice(0,1);
+                //elimina el ultimo elemento
+                numeros_pares.pop();
+                const numeros_impares = numeros.filter(numero => numero % 2 !== 0);
+
+                if(numeros_impares.length % 2 !== 0) {
+                    //si es impar, elimina el elemento central
+                    numeros_impares.splice(Math.floor(numeros_impares.length / 2), 1);
+                } else {
+                    //si es par, elimina 2 elementos
+                    numeros_impares.splice(0,2);
+                }
+
+
+
+                //suma los numeros pares entre si
+                const sumaPares = numeros_pares.reduce((acum, num) => acum + num, 0); 
+                // pone el resultado de la suma al final
+                numeros_pares.push(sumaPares);
+
+                //suma los numeros impares entre si
+                const sumaImpares = numeros_impares.reduce((acum, num) => acum + num, 0); 
+                // pone el resultado de la suma al final
+                numeros_impares.push(sumaImpares);
+
+
+
+                //mostramos por pantalla
+                document.write("Array: [" + numeros + "]");
+                document.write("<br>");
+                document.write("Array PARES: " + numeros_pares);
+                document.write("<br>");
+                document.write("Array IMPARES: " + numeros_impares);
+                
+                
+
+
+        </script>
+      
+    </body>
+</html>
+
+
+
+            
