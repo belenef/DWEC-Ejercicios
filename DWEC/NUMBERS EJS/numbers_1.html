@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>NUMBERS 1</title>
+    </head>
+
+    <body>
+                
+        <script>
+        
+             // Pedimos un número al usuario
+                let numero = parseFloat(prompt("Indica un número: "));
+                let operaciones = 0;
+            
+                // Evitamos el rango entre -1 y 1
+                while (numero > -1 && numero < 1) {
+                    window.alert("El número debe estar fuera del rango -1 a 1.");
+                    numero = parseFloat(prompt("Indica un número: "));
+                }
+                document.write("Número que has puesto: " + numero + "<br>");
+                // Multiplicamos hasta que llegue a infinito (positivo o negativo)
+                while (isFinite(numero)) {
+                    numero = numero * numero;
+                    operaciones++;
+                    document.write("" +numero + "<br>");
+                }
+                document.write("Se han realizado " + operaciones + " operaciones hasta llegar a infinito.");
+          
+        </script>
+      
+    </body>
+</html>
+
+
+

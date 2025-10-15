@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PO 1</title>
+    </head>
+
+    <body>
+                
+        <script>
+        
+            // Objeto para manejar los números mínimo y máximo
+             const numeros = {
+                minimo: parseInt(prompt("Indica el número mínimo: ")), 
+                maximo: parseInt(prompt("Indica el número máximo: ")),
+
+
+                // Método para calcular el array de números entre mínimo y máximo
+                 get calculo(){
+                    let rangoNumeros = [];
+                    // Generamos el array de números entre mínimo y máximo
+                    for(let i = this.minimo; i <= this.maximo; i++){
+                        rangoNumeros.push(i);
+                    }
+                    return rangoNumeros;
+                },
+
+                set nuevoCalculo (arrayNumeros){
+                    this.minimo = Math.min(...arrayNumeros);
+                    this.maximo = Math.max(...arrayNumeros);
+                }
+
+             };
+
+                let numeros_random = [];
+                // Generamos 5 números aleatorios y los almacenamos en el array
+                for(let i = 0; i < 5; i++){
+                    // Generamos números aleatorios entre 1 y 100
+                    let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+                    numeros_random.push(numeroAleatorio);
+                }
+
+                // Mostramos los resultados usando document.write
+                document.write(`<p><strong>Array de Números entre el Mínimo y Máximo:</strong> ${numeros.calculo}</p>`);
+                document.write(`<p><strong>Número Mínimo:</strong> ${numeros.minimo}</p>`);
+                document.write(`<p><strong>Número Máximo:</strong> ${numeros.maximo}</p><br>`);
+
+                // Actualizamos el objeto con los nuevos números aleatorios
+                document.write(`<p><strong>El Array con Números aleatorios es:</strong> ${numeros_random}</p>`);
+                document.write(`<p><strong>Número Mínimo:</strong> ${Math.min(...numeros_random)}</p>`);
+                document.write(`<p><strong>Número Máximo:</strong> ${Math.max(...numeros_random)}</p>`);
+
+        </script>
+      
+    </body>
+</html>
+
+
+
