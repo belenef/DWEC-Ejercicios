@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <meta charset="UTF-8">
+       <title> DIBUJAMOS UNA TABLA  </title>
+    </head>
+    <body>
+        <style>
+            table{
+               border-collapse: collapse;
+               width: 100%; 
+        
+            }
+            td{
+                border: 3px solid rgb(102, 188, 209);
+            }
+            
+       </style>
+        <table>
+            
+        </table>
+        
+        <script>
+            // pedir valores al usuario
+            let filas = parseInt(prompt("Indicanos el numero de filas: "));
+            let columnas = parseInt(prompt("Indicanos el numero de columnas: "));
+
+            //hacemos que escriba en la variable <table>
+            document.write("<table>");
+            let nombre = "Belen";
+            
+            // generar filas y columnas
+            for(let i=0; i<filas; i++){
+                document.write("<tr>");
+                
+                    for(let j=0; j<columnas; j++){
+                        document.write("<td>");
+                        document.write(nombre);
+                        document.write("</td>");
+                    }
+                document.write("</tr>");
+            }
+        </script>
+    </body>
+</html>
+
+
