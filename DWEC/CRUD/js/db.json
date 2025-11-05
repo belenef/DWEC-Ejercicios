@@ -1,0 +1,39 @@
+{
+  "clientes": [
+    {
+      "nombre": "Natalia Escrivá",
+      "email": "natalia@gmail.com",
+      "telefono": "325985632",
+      "empresa": "IES Serra Perenxisa",
+      "id": "4"
+    },
+    {
+      "nombre": "Roberto García",
+      "email": "roberto@gmail.com",
+      "telefono": "111111111",
+      "empresa": "IES La Marxadella",
+      "id": "5"
+    },
+    {
+      "nombre": "Pepe",
+      "email": "pepe@pepe",
+      "telefono": "222222222",
+      "empresa": "Empresa Pepetastic S.L",
+      "id": "66f8"
+    },
+    {
+      "nombre": "Belen :)",
+      "email": "belen@gmail.com",
+      "telefono": "666666666",
+      "empresa": "IES Serra Perenxisa",
+      "id": "d8c9"
+    },
+    {
+      "nombre": "Nose que poner",
+      "email": "nosenose@hotmail.com",
+      "telefono": "666999880",
+      "empresa": "SA Corporation",
+      "id": "4c35"
+    }
+  ]
+}
